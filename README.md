@@ -60,7 +60,7 @@ cd resulyzer
 cd server
 npm install
 # Add .env with MONGO_URI and GEMINI_API_KEY, JWT_SECRET, GMAIL_USER, GMAIL_APP_PASS 
-npm run dev
+npx nodemon server.ts
 
 cd ../client
 npm install
