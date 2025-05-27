@@ -29,6 +29,7 @@ type Updatedata = {
 const Dashboard = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("overview");
+  const [MobileOpen, setMobileOpen] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [Text, setText] = useState("");
   const [Responses, setResponses] = useState<Responses[]>([]);
@@ -216,13 +217,72 @@ const Dashboard = () => {
           </nav>
         </aside>
 
+        {/* Mobile menu overlay */}
+        {MobileOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden">
+            <div className="w-64 bg-blue-600 text-white p-6 h-full space-y-6 transform transition-transform duration-300">
+              <div className="flex justify-between items-center">
+                <h1 className="text-2xl font-bold">Resulyzer</h1>
+                <button
+                  className="text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <nav className="space-y-3">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => {
+                      setActiveTab(item.id);
+                      setMobileOpen(false);
+                    }}
+                    className={`flex items-center gap-2 w-full px-3 py-2 rounded-lg transition ${
+                      activeTab === item.id
+                        ? "bg-white text-blue-600"
+                        : "hover:bg-blue-500"
+                    }`}
+                  >
+                    {item.icon}
+                    <span>{item.label}</span>
+                  </button>
+                ))}
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-500 transition"
+                >
+                  <LogOut className="w-5 h-5" />
+                  <span>Logout</span>
+                </button>
+              </nav>
+            </div>
+          </div>
+        )}
+
         {/* Content Area */}
         <main className="flex-1 bg-gray-50 p-6">
           <div className="mb-6 flex justify-between items-center">
             <h2 className="text-2xl font-semibold text-gray-800 capitalize">
               {activeTab}
             </h2>
-            <button className="md:hidden p-2 bg-blue-600 text-white rounded">
+            <button
+              className="md:hidden p-2 bg-blue-600 text-white rounded"
+              onClick={() => setMobileOpen(!MobileOpen)}
+            >
               <Menu className="w-5 h-5" />
             </button>
           </div>
