@@ -9,7 +9,7 @@ It helps job seekers and recruiters analyze resumes for clarity, relevance, keyw
 
 ## 🚀 Features
 
-- 📄 Upload resumes (PDF, DOCX, or plain text) for instant analysis
+- 📄 Upload resumes (PDF) for instant analysis
 - 🤖 AI-powered insights and suggestions using Google Gemini AI API
 - 🔍 Highlights keywords, strengths, and areas for improvement
 - 📊 Visual feedback on resume structure, tone, and formatting
