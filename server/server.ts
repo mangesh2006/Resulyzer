@@ -22,7 +22,7 @@ app.use(fileUpload());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://resulyzer.vercel.app/", "http://localhost:11434"],
+    origin: ["https://resulyzer.vercel.app", "http://localhost:11434"],
     credentials: true,
   })
 );
