@@ -72,7 +72,7 @@ cd server
 npm install
 ```
 
-### 3. Create a .env file in server/ folder
+### 3. Create a .env file in `server/` folder
 
 ```bash
 MONGO_URI=your_mongodb_connection_string
