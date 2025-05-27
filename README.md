@@ -27,7 +27,7 @@ It helps job seekers and recruiters analyze resumes for clarity, relevance, keyw
 | Backend   | Node.js, Express.js          |
 | Database  | MongoDB (Atlas)              |
 | AI API    | Google Gemini AI             |
-| Deployment| Vercel (Frontend), Heroku/Render (Backend) |
+| Deployment| Vercel (Frontend), Render (Backend) |
 
 ---
 
