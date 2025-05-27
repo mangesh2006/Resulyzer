@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://resulyzer.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/login</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/signup</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/dashboard</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/reset-password</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/verify</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/verify-email</loc>
+  </url>
+  <url>
+    <loc>https://resulyzer.vercel.app/forgot-password</loc>
+  </url>
+</urlset>
