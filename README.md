@@ -23,7 +23,7 @@
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB (Cloud/Atlas)
 - **AI Integration:** Google Gemini API (via REST/SDK)
-- **Deployment:** Vercel (Frontend) & Render/Heroku (Backend)
+- **Deployment:** Vercel (Frontend) & Render (Backend)
 
 ---
 
