@@ -47,7 +47,7 @@ const Reset = () => {
   const onSubmit = async (data: z.infer<typeof PasswordSchema>) => {
     try {
       setLoading(true);
-      const api = await fetch("http://localhost:3000/api/reset-password", {
+      const api = await fetch("https://resulyzer.onrender.com/api/reset-password", {
         method: "PUT",
         body: JSON.stringify({ password: data.password, email }),
         headers: {

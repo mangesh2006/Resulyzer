@@ -40,7 +40,7 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/dashboard", {
+    fetch("https://resulyzer.onrender.com/api/dashboard", {
       credentials: "include",
     })
       .then((res) => {
@@ -62,7 +62,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const handlePdfFetch = async () => {
-      const api = await fetch("http://localhost:3000/api/pdf", {
+      const api = await fetch("https://resulyzer.onrender.com/api/pdf", {
         credentials: "include",
       });
 
@@ -104,7 +104,7 @@ const Dashboard = () => {
       if (file) {
         const formData = new FormData();
         formData.set("pdf", file);
-        const api = await fetch("http://localhost:3000/api/upload", {
+        const api = await fetch("https://resulyzer.onrender.com/api/upload", {
           method: "POST",
           body: formData,
           credentials: "include",
@@ -140,7 +140,7 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/logout", {
+      const res = await fetch("https://resulyzer.onrender.com/api/logout", {
         method: "POST",
         credentials: "include",
       });
@@ -159,7 +159,7 @@ const Dashboard = () => {
 
   const handleDelete = async () => {
     try {
-      const api = await fetch("http://localhost:3000/api/delete", {
+      const api = await fetch("https://resulyzer.onrender.com/api/delete", {
         method: "DELETE",
         credentials: "include",
       });

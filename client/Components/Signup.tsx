@@ -37,7 +37,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const api = await fetch("http://localhost:3000/api/signup", {
+      const api = await fetch("https://resulyzer.onrender.com/api/signup", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

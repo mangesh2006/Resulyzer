@@ -9,7 +9,7 @@ import {
   DialogTrigger,
 } from "../src/components/ui/dialog";
 import React, { useState, useEffect } from "react";
-import { Input } from "@/components/ui/input";
+import { Input } from "../src/components/ui/input";
 import { toast } from "react-toastify";
 
 type Profiledata = {
@@ -42,7 +42,7 @@ const EditDialog = ({ fullname, username, email, onSave }: Profiledata) => {
     try {
       setLoading(true);
 
-      const api = await fetch("http://localhost:3000/api/updateProfile", {
+      const api = await fetch("https://resulyzer.onrender.com/api/updateProfile", {
         method: "PUT",
         body: JSON.stringify(user),
         credentials: "include",

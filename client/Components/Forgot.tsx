@@ -20,7 +20,7 @@ const Forgot = () => {
     }
 
     try {
-      const api = await fetch("http://localhost:3000/api/verify", {
+      const api = await fetch("https://resulyzer.onrender.com/api/verify", {
         method: "POST",
         body: JSON.stringify({ email, otp: Otp }),
         headers: {
@@ -47,7 +47,7 @@ const Forgot = () => {
   const Resendotp = async () => {
     try {
       const email = localStorage.getItem("Email");
-      const api = await fetch("http://localhost:3000/api/resend-otp", {
+      const api = await fetch("https://resulyzer.onrender.com/api/resend-otp", {
         method: "POST",
         body: JSON.stringify({ email }),
         headers: {

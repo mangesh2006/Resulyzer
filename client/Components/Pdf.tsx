@@ -11,7 +11,7 @@ const Pdf = () => {
   useEffect(() => {
     const handleFetch = async () => {
       try {
-        const api = await fetch(`http://localhost:3000/api/Fetchpdf?fileName=${fileName}`)
+        const api = await fetch(`https://resulyzer.onrender.com/api/Fetchpdf?fileName=${fileName}`)
 
         const res = await api.json();
 

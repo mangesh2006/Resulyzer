@@ -13,7 +13,7 @@ const VerifyEmail = () => {
   const handleVerify = async () => {
     try {
       setLoading(true);
-      const api = await fetch("http://localhost:3000/api/verify-email", {
+      const api = await fetch("https://resulyzer.onrender.com/api/verify-email", {
         method: "POST",
         body: JSON.stringify({ email: Email }),
         headers: {

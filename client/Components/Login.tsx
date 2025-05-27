@@ -29,7 +29,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const api = await fetch("http://localhost:3000/api/login", {
+      const api = await fetch("https://resulyzer.onrender.com/api/login", {
         method: "POST",
         credentials: "include",
         body: JSON.stringify(data),
