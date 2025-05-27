@@ -20,7 +20,7 @@ const Transporter = nodemailer.createTransport({
 const otp = generateOtp();
 
 export async function SendMail(to: string) {
-  const templatePath = path.join(__dirname, "../email/email.html");
+  const templatePath = path.join(process.cwd(), "src/email/email.html");
   let emailTemplate = fs.readFileSync(templatePath, "utf-8");
 
   emailTemplate = emailTemplate.replace("{{code}}", otp);
