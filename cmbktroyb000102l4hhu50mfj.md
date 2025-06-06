@@ -3,6 +3,7 @@ title: "🤖 Resulyzer – An AI-Powered Resume Analyzer App"
 datePublished: Fri Jun 06 2025 13:12:20 GMT+0000 (Coordinated Universal Time)
 cuid: cmbktroyb000102l4hhu50mfj
 slug: resulyzer-an-ai-powered-resume-analyzer-app
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1749216099956/eb15399c-0cb0-433a-a2fe-546402b1145d.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1749215471847/7d173735-3c99-40a1-9d71-174755844dbb.png
 tags: ai, mern, gemini-integration
 
