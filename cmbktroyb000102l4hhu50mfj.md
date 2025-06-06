@@ -98,7 +98,7 @@ In today’s competitive job market, having a strong resume isn’t enough. It n
 
 ## 📦 Live Demo & GitHub
 
-* 🔗 **Live**: [resulyzer.vercel.app](http://resulyzer.vercel.app) *(Replace with real link)*
+* 🔗 **Live**: [resulyzer.vercel.app](http://resulyzer.vercel.app)
     
 * 💻 **GitHub**: [https://github.com/mangesh2006/Resulyzer.git](https://github.com/mangesh2006/Resulyzer.git)
     
