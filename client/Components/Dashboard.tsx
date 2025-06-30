@@ -10,6 +10,7 @@ import {
   RefreshCcw,
   MoveRight,
   Trash2,
+  Loader2,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { Helmet } from "react-helmet";
@@ -39,6 +40,7 @@ const Dashboard = () => {
     username: "",
     email: "",
   });
+  const [Uploading, setUploading] = useState(false);
 
   useEffect(() => {
     fetch("https://resulyzer.onrender.com/api/dashboard", {
@@ -94,9 +96,11 @@ const Dashboard = () => {
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUploading(true);
     if (e.target.files) {
       setFile(e.target.files[0]);
     }
+    setUploading(false);
   };
 
   const handleUpload = async () => {
@@ -344,10 +348,11 @@ const Dashboard = () => {
                 className="border p-2 w-full cursor-pointer"
                 onChange={handleChange}
               />
+              {Uploading ? <Loader2 className="animate-spin"/> : ""}
               <button
                 className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mb-2"
                 onClick={handleUpload}
-                disabled={Loading}
+                disabled={Loading || Uploading}
               >
                 {Loading ? "Analysing...." : "Analyze"}
               </button>
